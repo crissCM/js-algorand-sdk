@@ -16,6 +16,7 @@ module.exports = {
   resolve: {
     // Add '.ts' as resolvable extensions
     extensions: ['.ts', '.js'],
+    fallback: { "crypto": require.resolve("crypto-browserify") }
   },
   plugins: [
     new webpack.ProvidePlugin({
